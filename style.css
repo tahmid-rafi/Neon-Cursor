@@ -1,17 +1,18 @@
 body, html, #app {
-     margin: 0;
-     width: 100%;
-     height: 100%;
-   }
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
 
-   #app {
-     overflow: hidden;
-     touch-action: pan-up;
-     color: #ffffff;
-     font-family: 'Montserrat', sans-serif;
-     text-align: center;
-     text-shadow: 0 0 5px #ffffff, 0 0 20px #000, 0 0 30px #000;
-   }
+#app {
+  overflow: hidden;
+  touch-action: pan-up;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  text-shadow: 0 0 5px #ffffff, 0 0 20px #000, 0 0 30px #000;
+}
+
 
    #app h1 {
      --fontSize: 60px;
@@ -37,3 +38,30 @@ body, html, #app {
      z-index: -1;
      top: 0;
    }
+
+
+   /* মিডিয়া কুয়েরি */
+
+/* ছোট ডিভাইসের জন্য (600px এবং নিচে) */
+@media only screen and (max-width: 600px) {
+  #app h1 {
+      --fontSize: 40px;
+      --lineHeight: 50px;
+  }
+}
+
+/* মাঝারি ডিভাইসের জন্য (601px থেকে 992px পর্যন্ত) */
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  #app h1 {
+      --fontSize: 50px;
+      --lineHeight: 70px;
+  }
+}
+
+/* বড় ডিভাইসের জন্য (993px এবং উপরে) */
+@media only screen and (min-width: 993px) {
+  #app h1 {
+      --fontSize: 60px;
+      --lineHeight: 80px;
+  }
+}
